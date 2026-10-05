@@ -1,0 +1,574 @@
+{
+  "site": "https://ayuinternationhotel.netlify.app",
+  "generatedAt": "2026-10-05T06:39:50.693Z",
+  "pages": [
+    {
+      "url": "https://ayuinternationhotel.netlify.app/",
+      "html": ".assets-manifest/html/home.html",
+      "title": "RedCaynne Re"
+    },
+    {
+      "url": "https://ayuinternationhotel.netlify.app/#",
+      "html": ".assets-manifest/html/home.html",
+      "title": "RedCaynne Re"
+    },
+    {
+      "url": "https://ayuinternationhotel.netlify.app/table",
+      "html": ".assets-manifest/html/table.html",
+      "title": "RedCaynne Re"
+    },
+    {
+      "url": "https://ayuinternationhotel.netlify.app/event",
+      "html": ".assets-manifest/html/event.html",
+      "title": "RedCaynne Re"
+    },
+    {
+      "url": "https://ayuinternationhotel.netlify.app/about-us",
+      "html": ".assets-manifest/html/about-us.html",
+      "title": "RedCaynne Re"
+    },
+    {
+      "url": "https://ayuinternationhotel.netlify.app/gallery",
+      "html": ".assets-manifest/html/gallery.html",
+      "title": "RedCaynne Re"
+    },
+    {
+      "url": "https://ayuinternationhotel.netlify.app/contact",
+      "html": ".assets-manifest/html/contact.html",
+      "title": "RedCaynne Re"
+    },
+    {
+      "url": "https://ayuinternationhotel.netlify.app/blog-details",
+      "html": ".assets-manifest/html/blog-details.html",
+      "title": "RedCaynne Re"
+    },
+    {
+      "url": "https://hulunem.com/place/ethiopia/oromia/adama/ayu-international-hotel/",
+      "html": ".assets-manifest/html/hulunem-com.html"
+    }
+  ],
+  "images": [
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/28ab7a25e3646ca94fec443bef67882fa4ec7df2/f08cd/img/logo.jpg",
+      "file": ".assets-manifest/images/img-logo.jpg",
+      "bytes": 50461,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/fb209d2c41d712c8d180414727c8bc1112001023/91d09/img/home-slider/slider-2.jpg",
+      "file": ".assets-manifest/images/home-sli-slider-2.jpg",
+      "bytes": 279655,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://ayuinternationhotel.netlify.app/img/ayu%20nxt.jpg",
+      "file": ".assets-manifest/images/ayu-nxt.jpg",
+      "bytes": 186938,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/787bf5efc882b40ae0632dae865b5f6ebeda5444/4081f/img/ddd.jpg",
+      "file": ".assets-manifest/images/img-ddd.jpg",
+      "bytes": 148948,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/e3b3a55d464579937d915ab8c1bef60c23bb2471/146b2/img/service-icon/service-1.png",
+      "file": ".assets-manifest/images/service-1.png",
+      "bytes": 7718,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/5924603fd6e9591a93663d179e0ae76fc6918740/71697/img/service-icon/service-2.png",
+      "file": ".assets-manifest/images/service-2.png",
+      "bytes": 4975,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/e4d89d0d91d71342de76858630c77eec2f5dc340/b8446/img/service-icon/service-3.png",
+      "file": ".assets-manifest/images/service-3.png",
+      "bytes": 5165,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/b9aaec4e1b6c569fea164701560b9779ee82dbfa/60883/img/service-icon/service-4.png",
+      "file": ".assets-manifest/images/service-4.png",
+      "bytes": 5819,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://ayuinternationhotel.netlify.app/img/aba%20gedac.jpg",
+      "file": ".assets-manifest/images/aba-gedac.jpg",
+      "bytes": 708899,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/47d5e685fa8dc5bb3263dbd495b8aa8cb6182cea/c55b5/img/133794559.jpg",
+      "file": ".assets-manifest/images/img-133794559.jpg",
+      "bytes": 170596,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/dfe36a611facad56170792f756637163138bf1a0/5b28c/img/21743013_2036070919956343_2447495604733530418_n.jpg",
+      "file": ".assets-manifest/images/img-21743013_2036070919956343_2447495604733530418_n.jpg",
+      "bytes": 39822,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/cd22d625967fc76dc98e86437df4b6a3b416569e/4f9ff/img/gallery_1.jpg",
+      "file": ".assets-manifest/images/img-gallery_1.jpg",
+      "bytes": 55347,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/1222c737d3d075e39088acea543e86f4afb1b297/9c8cd/img/gallery_2.jpg",
+      "file": ".assets-manifest/images/img-gallery_2.jpg",
+      "bytes": 99096,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/b765defce9ab3a7f949eeeed2e1783d809951561/65eb7/img/gallery_3.jpg",
+      "file": ".assets-manifest/images/img-gallery_3.jpg",
+      "bytes": 47415,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/b0a24877b1c39c9b593ab68d5e54f2e4f89b1fda/372c0/img/gallery_4.jpg",
+      "file": ".assets-manifest/images/img-gallery_4.jpg",
+      "bytes": 58007,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/9a67e0fbc9ea3e50721b6fd63f74b566804167c1/69a28/img/dd.jpg",
+      "file": ".assets-manifest/images/img-dd.jpg",
+      "bytes": 42791,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/4e53a58d1fae65ceed1a421cb44c3279c45d5c91/71683/img/rift-valley-hotel_15373710363.jpeg",
+      "file": ".assets-manifest/images/img-rift-valley-hotel_15373710363.jpeg",
+      "bytes": 77055,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/2640ef8e5ee008d230ca39fcb9592fd867128c1f/8f407/img/meetinghalls-1.gif",
+      "file": ".assets-manifest/images/img-meetinghalls-1.gif",
+      "bytes": 564879,
+      "contentType": "image/gif"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/1d7ad99edd8e41a15ccc9bca3c5dd43201521719/55341/img/staticmap.png",
+      "file": ".assets-manifest/images/img-staticmap.png",
+      "bytes": 46523,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/ec228ae688d35efff733420d1dbf6592acdfad6f/75200/img/kk.jpg",
+      "file": ".assets-manifest/images/img-kk.jpg",
+      "bytes": 220162,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/b64feaaa79f8e9836f7658455eecefb695cda4ce/aca23/img/133794552.jpg",
+      "file": ".assets-manifest/images/img-133794552.jpg",
+      "bytes": 67559,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/51f0dfbaa6157eb3a1b838b6903fd95c1cf7b847/82d47/img/133794540.jpg",
+      "file": ".assets-manifest/images/img-133794540.jpg",
+      "bytes": 88790,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/7d91647682fedeb75b9808119432675421ab98e4/35ba4/img/133794546.jpg",
+      "file": ".assets-manifest/images/img-133794546.jpg",
+      "bytes": 91300,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/a6b7ba9e458809a918c90d398d26b3909ed00a6d/c33c0/img/133794536.jpg",
+      "file": ".assets-manifest/images/img-133794536.jpg",
+      "bytes": 4919,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/3d560af057221450bf770c9215aca2c4ed1b77c2/c4f5e/img/133794550.jpg",
+      "file": ".assets-manifest/images/img-133794550.jpg",
+      "bytes": 93747,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/ef5bc416edb7603cfb15925e5b99a36e94a051eb/9265e/img/133794575.jpg",
+      "file": ".assets-manifest/images/img-133794575.jpg",
+      "bytes": 70008,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/c273a53953be62915dd8aa87c94130c38b004131/24e5e/img/133794563.jpg",
+      "file": ".assets-manifest/images/img-133794563.jpg",
+      "bytes": 124383,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/ca7e1b6210df134d9df072c1406880b1b53e67cf/1ea8d/img/logo-1.png",
+      "file": ".assets-manifest/images/img-logo-1.png",
+      "bytes": 3730,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/8c2b99075b15e8af2f672ff44f0ebd2f99a3410a/ef065/img/blog/blog_details-1.jpg",
+      "file": ".assets-manifest/images/blog_details-1.jpg",
+      "bytes": 61708,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/08579d68971e6f8d2d938163016bc9e1f2fb871e/895ec/img/blog/blog_details-par.jpg",
+      "file": ".assets-manifest/images/blog_details-par.jpg",
+      "bytes": 23265,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/b3fa39173be6bda55c779f68ca2531958ae4d56d/31d21/img/blog/blog_details-par2.jpg",
+      "file": ".assets-manifest/images/blog_details-par2.jpg",
+      "bytes": 29626,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/94876ff474c6a082a4db56bbc1775041c92ef894/43c05/img/comment-user/comment-1.png",
+      "file": ".assets-manifest/images/comment-1.png",
+      "bytes": 8022,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/18a2f9f3059c499713cc1a11ed50b846a98139ad/90fee/img/comment-user/comment-2.png",
+      "file": ".assets-manifest/images/comment-2.png",
+      "bytes": 10295,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/c9a7938ee9c3bffe66893fc98c71ea24cb59cc02/a204e/img/comment-user/comment-3.png",
+      "file": ".assets-manifest/images/comment-3.png",
+      "bytes": 8330,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/138d52995b1e5b929c95c54ba65af246756033f7/8caea/img/blog/recent-post/recent-post-1.jpg",
+      "file": ".assets-manifest/images/recent-post-1.jpg",
+      "bytes": 3827,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/af06fb5e967fbf7c0824a7eaf9e56343873562e2/354a1/img/blog/recent-post/recent-post-2.jpg",
+      "file": ".assets-manifest/images/recent-post-2.jpg",
+      "bytes": 3724,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/733ebe43e42f3101b9377560149a084713a07301/385ed/img/blog/recent-post/recent-post-3.jpg",
+      "file": ".assets-manifest/images/recent-post-3.jpg",
+      "bytes": 3322,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/cbc3c6a38f03ef942ec8a599a571de6c0ca4dc8c/ca066/img/gallery/f-w-gallery/f-w-gallery-1.jpg",
+      "file": ".assets-manifest/images/f-w-gallery-1.jpg",
+      "bytes": 4358,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/3aba44a16bc31fac3ef0f46df6c5cf137d420880/4c68c/img/gallery/f-w-gallery/f-w-gallery-2.jpg",
+      "file": ".assets-manifest/images/f-w-gallery-2.jpg",
+      "bytes": 4202,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/b6a7411c4f15cf2f943c7dec62edf660c38d7fb0/d3873/img/gallery/f-w-gallery/f-w-gallery-3.jpg",
+      "file": ".assets-manifest/images/f-w-gallery-3.jpg",
+      "bytes": 4250,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/c0e8d468ca2427ff4c18fb64ac9ffe06d258d9c5/4b2ae/img/gallery/f-w-gallery/f-w-gallery-4.jpg",
+      "file": ".assets-manifest/images/f-w-gallery-4.jpg",
+      "bytes": 5024,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/43b762b691bc19c29452bc77a8561ee0a2a8fac3/c1b6b/img/gallery/f-w-gallery/f-w-gallery-5.jpg",
+      "file": ".assets-manifest/images/f-w-gallery-5.jpg",
+      "bytes": 5751,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://d33wubrfki0l68.cloudfront.net/57e8ecaf4edee73c032737fcbba7e3ae8797c6c1/ba4f2/img/gallery/f-w-gallery/f-w-gallery-6.jpg",
+      "file": ".assets-manifest/images/f-w-gallery-6.jpg",
+      "bytes": 4585,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/ayu1.jpg",
+      "file": ".assets-manifest/images/ext-ayu1.jpg",
+      "bytes": 57274,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/ayu1-1024x576.jpg",
+      "file": ".assets-manifest/images/ext-ayu1-1024x576.jpg",
+      "bytes": 33078,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/ayu-1024x768.jpg",
+      "file": ".assets-manifest/images/ext-ayu-1024x768.jpg",
+      "bytes": 54615,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2026/04/ayu-hotel4.jpg",
+      "file": ".assets-manifest/images/ext-ayu-hotel4.jpg",
+      "bytes": 88790,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2026/04/ayu-hotel3.jpg",
+      "file": ".assets-manifest/images/ext-ayu-hotel3.jpg",
+      "bytes": 67559,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2026/04/ayu-hotel2-1024x768.webp",
+      "file": ".assets-manifest/images/ext-ayu-hotel2-1024x768.webp",
+      "bytes": 187688,
+      "contentType": "image/webp"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/01/cropped-android-chrome-512x512-1-32x32.png",
+      "file": ".assets-manifest/images/ext-cropped-android-chrome-512x512-1-32x32.png",
+      "bytes": 586,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/01/cropped-android-chrome-512x512-1-192x192.png",
+      "file": ".assets-manifest/images/ext-cropped-android-chrome-512x512-1-192x192.png",
+      "bytes": 3248,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/01/cropped-android-chrome-512x512-1-180x180.png",
+      "file": ".assets-manifest/images/ext-cropped-android-chrome-512x512-1-180x180.png",
+      "bytes": 2795,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/01/cropped-android-chrome-512x512-1-270x270.png",
+      "file": ".assets-manifest/images/ext-cropped-android-chrome-512x512-1-270x270.png",
+      "bytes": 4351,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/ayu.jpg",
+      "file": ".assets-manifest/images/ext-ayu.jpg",
+      "bytes": 100318,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2026/04/ayu-hotel2.webp",
+      "file": ".assets-manifest/images/ext-ayu-hotel2.webp",
+      "bytes": 337246,
+      "contentType": "image/webp"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/adama-kurifto2.jpg",
+      "file": ".assets-manifest/images/ext-adama-kurifto2.jpg",
+      "bytes": 119760,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/sodere-1.jpg",
+      "file": ".assets-manifest/images/ext-sodere-1.jpg",
+      "bytes": 39901,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/naflet-hotels.jpeg",
+      "file": ".assets-manifest/images/ext-naflet-hotels.jpeg",
+      "bytes": 29037,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/ayu1-300x169.jpg",
+      "file": ".assets-manifest/images/ext-ayu1-300x169.jpg",
+      "bytes": 5784,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/ayu1-768x432.jpg",
+      "file": ".assets-manifest/images/ext-ayu1-768x432.jpg",
+      "bytes": 21380,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/ayu1-1320x743.jpg",
+      "file": ".assets-manifest/images/ext-ayu1-1320x743.jpg",
+      "bytes": 156651,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/ayu1-200x113.jpg",
+      "file": ".assets-manifest/images/ext-ayu1-200x113.jpg",
+      "bytes": 9563,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/ayu-300x225.jpg",
+      "file": ".assets-manifest/images/ext-ayu-300x225.jpg",
+      "bytes": 9309,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/ayu-768x576.jpg",
+      "file": ".assets-manifest/images/ext-ayu-768x576.jpg",
+      "bytes": 33818,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/ayu-1320x990.jpg",
+      "file": ".assets-manifest/images/ext-ayu-1320x990.jpg",
+      "bytes": 85552,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/ayu-200x150.jpg",
+      "file": ".assets-manifest/images/ext-ayu-200x150.jpg",
+      "bytes": 6342,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2026/04/ayu-hotel4-300x225.jpg",
+      "file": ".assets-manifest/images/ext-ayu-hotel4-300x225.jpg",
+      "bytes": 13448,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2026/04/ayu-hotel4-768x576.jpg",
+      "file": ".assets-manifest/images/ext-ayu-hotel4-768x576.jpg",
+      "bytes": 63587,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2026/04/ayu-hotel3-300x225.jpg",
+      "file": ".assets-manifest/images/ext-ayu-hotel3-300x225.jpg",
+      "bytes": 11083,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2026/04/ayu-hotel3-768x576.jpg",
+      "file": ".assets-manifest/images/ext-ayu-hotel3-768x576.jpg",
+      "bytes": 48747,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2026/04/ayu-hotel2-300x225.webp",
+      "file": ".assets-manifest/images/ext-ayu-hotel2-300x225.webp",
+      "bytes": 19060,
+      "contentType": "image/webp"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2026/04/ayu-hotel2-768x576.webp",
+      "file": ".assets-manifest/images/ext-ayu-hotel2-768x576.webp",
+      "bytes": 104806,
+      "contentType": "image/webp"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/adama-kurifto2-300x225.jpg",
+      "file": ".assets-manifest/images/ext-adama-kurifto2-300x225.jpg",
+      "bytes": 7297,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/adama-kurifto2-1024x768.jpg",
+      "file": ".assets-manifest/images/ext-adama-kurifto2-1024x768.jpg",
+      "bytes": 63460,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/adama-kurifto2-768x576.jpg",
+      "file": ".assets-manifest/images/ext-adama-kurifto2-768x576.jpg",
+      "bytes": 37329,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/adama-kurifto2-200x150.jpg",
+      "file": ".assets-manifest/images/ext-adama-kurifto2-200x150.jpg",
+      "bytes": 3755,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/sodere-1-300x169.jpg",
+      "file": ".assets-manifest/images/ext-sodere-1-300x169.jpg",
+      "bytes": 3220,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/sodere-1-1024x576.jpg",
+      "file": ".assets-manifest/images/ext-sodere-1-1024x576.jpg",
+      "bytes": 21292,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/sodere-1-768x432.jpg",
+      "file": ".assets-manifest/images/ext-sodere-1-768x432.jpg",
+      "bytes": 12708,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/sodere-1-200x113.jpg",
+      "file": ".assets-manifest/images/ext-sodere-1-200x113.jpg",
+      "bytes": 1999,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/naflet-hotels-300x200.jpeg",
+      "file": ".assets-manifest/images/ext-naflet-hotels-300x200.jpeg",
+      "bytes": 3213,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/naflet-hotels-1024x682.jpeg",
+      "file": ".assets-manifest/images/ext-naflet-hotels-1024x682.jpeg",
+      "bytes": 19195,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/naflet-hotels-768x512.jpeg",
+      "file": ".assets-manifest/images/ext-naflet-hotels-768x512.jpeg",
+      "bytes": 12351,
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://hulunem.com/wp-content/uploads/2024/11/naflet-hotels-200x133.jpeg",
+      "file": ".assets-manifest/images/ext-naflet-hotels-200x133.jpeg",
+      "bytes": 1913,
+      "contentType": "image/jpeg"
+    }
+  ],
+  "errors": [
+    {
+      "pageUrl": "https://ayuinternationhotel.netlify.app/IE=edge",
+      "error": "Error: 404 https://ayuinternationhotel.netlify.app/IE=edge"
+    },
+    {
+      "pageUrl": "https://ayuinternationhotel.netlify.app/width=device-width,%20initial-scale=1",
+      "error": "Error: 404 https://ayuinternationhotel.netlify.app/width=device-width,%20initial-scale=1"
+    },
+    {
+      "pageUrl": "https://ayuinternationhotel.netlify.app/YacLOpFdPI6Xbku6dJMrlx6XD5Yn7t2kllAmYZpEaP4",
+      "error": "Error: 404 https://ayuinternationhotel.netlify.app/YacLOpFdPI6Xbku6dJMrlx6XD5Yn7t2kllAmYZpEaP4"
+    },
+    {
+      "url": "https://ayuinternationhotel.netlify.app/img/express-favicon.png",
+      "error": "Error: 404"
+    }
+  ]
+}
