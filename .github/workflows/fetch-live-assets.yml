@@ -1,0 +1,36 @@
+name: Fetch live site assets
+
+# Temporary helper: pulls the imagery and page markup of the hotel's current
+# public site into .assets-manifest/ so it can be reviewed and curated.
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/trigger-assets.txt"
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Collect assets
+        run: node .github/scripts/fetch-site-assets.mjs
+      - name: Commit
+        run: |
+          git config user.name "ayu-asset-bot"
+          git config user.email "ayu-asset-bot@users.noreply.github.com"
+          git add -A .assets-manifest
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+          else
+            git commit -m "chore: fetch live site assets for curation"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
