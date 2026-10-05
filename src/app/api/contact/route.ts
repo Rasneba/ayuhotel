@@ -4,7 +4,7 @@ import { createContactMessage } from "@/lib/queries";
 export const dynamic = "force-dynamic";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-const SUBJECTS = ["Reservations", "Weddings & Events", "Dining", "Spa & Wellness", "Corporate", "Other"];
+const SUBJECTS = ["Reservations", "Weddings & Events", "Conference & Meetings", "Dining", "Wellness & Sauna", "Other"];
 
 export async function POST(request: NextRequest) {
   let body: Record<string, unknown>;
@@ -39,6 +39,12 @@ export async function POST(request: NextRequest) {
     return Response.json({ ok: true, id: saved.id }, { status: 201 });
   } catch (error) {
     console.error("POST /api/contact", error);
-    return Response.json({ error: "We could not send your message. Please try again." }, { status: 500 });
+    return Response.json(
+      {
+        error:
+          "We could not send your message just now. Please e-mail ayuhotel@gmail.com or call +251 91 149 1500 and we will help you directly.",
+      },
+      { status: 503 },
+    );
   }
 }

@@ -10,19 +10,21 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${HOTEL.name} | Luxury Hotel in Adama, Ethiopia`,
+    default: `${HOTEL.name} | Hotel in Adama (Nazret), Ethiopia`,
     template: `%s | ${HOTEL.name}`,
   },
   description: HOTEL.description,
   keywords: [
     "Ayu International Hotel",
-    "Adama hotel",
+    "Ayu Int Hotel",
+    "hotel in Adama",
     "Nazret hotel",
-    "luxury hotel Ethiopia",
-    "hotel near Addis Ababa",
-    "Adama conference venue",
-    "Adama spa",
+    "hotel in Adama Ethiopia",
+    "Adama conference hall",
     "Adama wedding venue",
+    "cheap hotel Adama",
+    "hotel near Addis Ababa",
+    "Oromia hotel",
   ],
   applicationName: HOTEL.name,
   authors: [{ name: HOTEL.name }],
@@ -36,7 +38,7 @@ export const metadata: Metadata = {
     siteName: HOTEL.name,
     title: `${HOTEL.name} — ${HOTEL.tagline}`,
     description: HOTEL.description,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `${HOTEL.name} pool at dusk` }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: `${HOTEL.name}, Adama` }],
   },
   twitter: {
     card: "summary_large_image",
@@ -64,7 +66,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://images.pexels.com" />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap"

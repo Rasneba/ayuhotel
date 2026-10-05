@@ -31,10 +31,10 @@ export default function Gallery() {
         <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
           <Reveal className="max-w-2xl">
             <span className="eyebrow">Gallery</span>
-            <h2 className="display-lg mt-5 text-cream-50">Moments from the house</h2>
+            <h2 className="display-lg mt-5 text-cream-50">A look around the hotel</h2>
             <p className="mt-5 text-[15px] leading-relaxed text-cream-200/65 sm:text-base">
-              Wander through our rooms, gardens, kitchens and ballrooms. Tap any image to open the full-screen
-              viewer — swipe, zoom and browse by category.
+              Photographs of the hotel itself — our rooms, garden, pool, lobby and conference hall. Tap an
+              image to open the full-screen viewer.
             </p>
           </Reveal>
 

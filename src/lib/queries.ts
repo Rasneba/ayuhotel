@@ -14,6 +14,7 @@ import {
 } from "@/db/schema";
 import { nightsBetween } from "./dates";
 import { buildQuote, type Quote } from "./pricing";
+import { fallbackRooms } from "@/db/seed-data";
 
 export type RoomAvailability = {
   room: Room;
@@ -21,6 +22,31 @@ export type RoomAvailability = {
   fitsGuests: boolean;
   quote: Quote;
 };
+
+/**
+ * Availability calculated from the bundled room list. Used when the database
+ * cannot be reached so visitors can still see live pricing and enquire by
+ * phone, WhatsApp or e-mail instead of hitting an error page.
+ */
+export function bundledAvailability(params: {
+  checkIn: string;
+  checkOut: string;
+  guests: number;
+  promoCode?: string | null;
+}): RoomAvailability[] {
+  const nights = nightsBetween(params.checkIn, params.checkOut);
+  return fallbackRooms().map((room: Room) => ({
+    room,
+    availableUnits: room.totalUnits,
+    fitsGuests: room.maxGuests >= params.guests,
+    quote: buildQuote({
+      nightlyRateCents: room.priceCents,
+      nights,
+      checkIn: params.checkIn,
+      promoCode: params.promoCode,
+    }),
+  }));
+}
 
 export async function getRooms(): Promise<Room[]> {
   await ensureDatabase();

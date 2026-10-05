@@ -4,9 +4,9 @@ import { useState, type FormEvent } from "react";
 import { HOTEL, whatsappLink } from "@/lib/hotel";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { Check, Clock, Facebook, Instagram, Mail, MapPin, Phone, TikTok, WhatsApp, XSocial } from "@/components/ui/Icons";
+import { Check, Clock, Mail, MapPin, Phone, WhatsApp } from "@/components/ui/Icons";
 
-const SUBJECTS = ["Reservations", "Weddings & Events", "Dining", "Spa & Wellness", "Corporate", "Other"];
+const SUBJECTS = ["Reservations", "Weddings & Events", "Conference & Meetings", "Dining", "Wellness & Sauna", "Other"];
 
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
@@ -46,7 +46,7 @@ export default function Contact() {
           align="center"
           eyebrow="Contact"
           title="We would be delighted to hear from you"
-          description="Reservations, celebrations, press or simply a question about Adama — our team replies within a few hours, every day of the year."
+          description="Reservations, conferences, weddings or simply a question about Adama — call the 24-hour front desk, message us on WhatsApp or send an e-mail."
         />
 
         <div className="mt-14 grid gap-6 lg:grid-cols-12">
@@ -61,7 +61,7 @@ export default function Contact() {
                   <div>
                     <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-cream-200/50">Telephone</p>
                     <a href={HOTEL.phoneHref} className="mt-1 block text-base hover:text-gold-300">{HOTEL.phone}</a>
-                    <a href={`tel:${HOTEL.mobile.replace(/\s/g, "")}`} className="block text-cream-200/70 hover:text-gold-300">{HOTEL.mobile}</a>
+                    <a href={HOTEL.phoneAltHref} className="block text-cream-200/70 hover:text-gold-300">{HOTEL.phoneAlt}</a>
                   </div>
                 </li>
                 <li className="flex gap-4">
@@ -76,7 +76,8 @@ export default function Contact() {
                   <div>
                     <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-cream-200/50">Address</p>
                     <p className="mt-1 text-base">{HOTEL.address.street}</p>
-                    <p className="text-cream-200/70">{HOTEL.address.city}, {HOTEL.address.country}</p>
+                    <p className="text-cream-200/70">{HOTEL.address.city}, {HOTEL.address.region}, {HOTEL.address.country}</p>
+                    <p className="text-cream-200/70">{HOTEL.address.landmark}</p>
                   </div>
                 </li>
                 <li className="flex gap-4">
@@ -98,17 +99,10 @@ export default function Contact() {
                 <WhatsApp size={20} /> Chat on WhatsApp
               </a>
 
-              <div className="mt-auto flex items-center gap-3 pt-10">
-                {[
-                  { href: HOTEL.social.instagram, label: "Instagram", Icon: Instagram },
-                  { href: HOTEL.social.facebook, label: "Facebook", Icon: Facebook },
-                  { href: HOTEL.social.x, label: "X", Icon: XSocial },
-                  { href: HOTEL.social.tiktok, label: "TikTok", Icon: TikTok },
-                ].map(({ href, label, Icon }) => (
-                  <a key={label} href={href} target="_blank" rel="noreferrer" aria-label={label} className="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-cream-200/70 transition-all hover:border-gold-500 hover:text-gold-400">
-                    <Icon size={17} />
-                  </a>
-                ))}
+              <div className="mt-auto grid gap-2 pt-10 text-[12px] text-cream-200/60">
+                <p>{HOTEL.openHours}</p>
+                <p>Check-in {HOTEL.checkIn} · Check-out {HOTEL.checkOut}</p>
+                <p>Replies to e-mail within a few hours, every day.</p>
               </div>
             </div>
           </Reveal>

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, type FormEvent } from "react";
 import { HOTEL, NAV_LINKS, whatsappLink } from "@/lib/hotel";
-import { ArrowRight, Facebook, Instagram, Mail, MapPin, Phone, TikTok, WhatsApp, XSocial } from "@/components/ui/Icons";
+import { ArrowRight, Mail, MapPin, Phone, WhatsApp } from "@/components/ui/Icons";
 import Logo from "./Logo";
 
 export default function Footer() {
@@ -26,15 +26,12 @@ export default function Footer() {
         <div className="lg:col-span-4">
           <Logo />
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-cream-200/60">
-            A landmark of Ethiopian hospitality since {HOTEL.founded}. Rooms, suites, dining,
-            wellness and celebrations in the heart of Adama — where the Rift Valley begins.
+            Serving guests in the centre of Adama since {HOTEL.founded}. Rooms, garden restaurant
+            and bar, conference halls, sauna, pool and private parking — in the heart of the city.
           </p>
           <div className="mt-7 flex items-center gap-3">
             {[
-              { href: HOTEL.social.instagram, label: "Instagram", Icon: Instagram },
-              { href: HOTEL.social.facebook, label: "Facebook", Icon: Facebook },
-              { href: HOTEL.social.x, label: "X", Icon: XSocial },
-              { href: HOTEL.social.tiktok, label: "TikTok", Icon: TikTok },
+              { href: HOTEL.phoneHref, label: "Call the front desk", Icon: Phone },
               { href: whatsappLink(), label: "WhatsApp", Icon: WhatsApp },
             ].map(({ href, label, Icon }) => (
               <a
@@ -82,9 +79,15 @@ export default function Footer() {
             </li>
             <li className="flex gap-3">
               <Phone size={18} className="mt-0.5 shrink-0 text-gold-400" />
-              <a href={HOTEL.phoneHref} className="hover:text-white">
-                {HOTEL.phone}
-              </a>
+              <span>
+                <a href={HOTEL.phoneHref} className="hover:text-white">
+                  {HOTEL.phone}
+                </a>
+                <br />
+                <a href={HOTEL.phoneAltHref} className="hover:text-white">
+                  {HOTEL.phoneAlt}
+                </a>
+              </span>
             </li>
             <li className="flex gap-3">
               <Mail size={18} className="mt-0.5 shrink-0 text-gold-400" />
@@ -98,7 +101,7 @@ export default function Footer() {
         <div className="lg:col-span-3">
           <h3 className="font-sans text-[11px] font-semibold uppercase tracking-[0.3em] text-gold-500">Newsletter</h3>
           <p className="mt-6 text-sm text-cream-200/60">
-            Seasonal offers, culinary evenings and cultural events — a few times a year, never more.
+            Seasonal offers and hotel news — a few times a year, never more.
           </p>
           {done ? (
             <p className="mt-5 rounded-xl border border-gold-500/30 bg-gold-500/10 px-4 py-3 text-sm text-gold-200">
@@ -138,7 +141,7 @@ export default function Footer() {
           <p className="flex items-center gap-5">
             <span>Privacy</span>
             <span>Terms</span>
-            <span>Photography via Pexels</span>
+            <span>Photography © {HOTEL.name}</span>
           </p>
         </div>
       </div>

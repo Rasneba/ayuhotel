@@ -87,7 +87,13 @@ export async function POST(request: NextRequest) {
       return Response.json({ error: error.message }, { status: error.status });
     }
     console.error("POST /api/bookings", error);
-    return Response.json({ error: "We could not complete your booking. Please try again." }, { status: 500 });
+    return Response.json(
+      {
+        error:
+          "Online booking is temporarily unavailable. Please call +251 91 149 1500 or message us on WhatsApp and reception will reserve your room straight away.",
+      },
+      { status: 503 },
+    );
   }
 }
 
@@ -100,6 +106,6 @@ export async function GET(request: NextRequest) {
     return Response.json(result);
   } catch (error) {
     console.error("GET /api/bookings", error);
-    return Response.json({ error: "Unable to load booking." }, { status: 500 });
+    return Response.json({ error: "Unable to load this booking at the moment." }, { status: 503 });
   }
 }

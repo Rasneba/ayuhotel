@@ -7,25 +7,25 @@ import Reveal from "@/components/ui/Reveal";
 import { ArrowRight } from "@/components/ui/Icons";
 
 const STATS = [
-  { value: HOTEL.roomCount, suffix: "", label: "Rooms & suites" },
-  { value: new Date().getFullYear() - HOTEL.founded, suffix: "+", label: "Years of hospitality" },
-  { value: HOTEL.rating, decimals: 1, suffix: "", label: "Guest rating" },
-  { value: 400, suffix: "", label: "Banquet capacity" },
+  { value: new Date().getFullYear() - HOTEL.founded, suffix: "+", label: "Years in Adama" },
+  { value: 6, suffix: "", label: "Room & suite types" },
+  { value: 24, suffix: "h", label: "Front desk & security" },
+  { value: 45, suffix: " min", label: "From Addis by expressway" },
 ];
 
 const MARQUEE = [
-  "Outdoor Pool",
-  "Sauna & Steam",
-  "Sabisa Restaurant",
-  "Abyssinia Ballroom",
+  "Outdoor Swimming Pool",
+  "Garden Restaurant & Bar",
+  "Conference & Banquet Halls",
   "24-hour Front Desk",
-  "Airport Shuttle",
-  "Business Centre",
-  "Botanical Gardens",
-  "Ayu Wellness Spa",
-  "Free Parking",
-  "High-speed Wi-Fi",
-  "Buna Lounge",
+  "Sauna",
+  "Massage & Beauty Salon",
+  "Gymnasium",
+  "Free Wi-Fi",
+  "Free Private Parking",
+  "Lift to All Floors",
+  "Air Conditioning",
+  "Non-Smoking Rooms",
 ];
 
 export default function About() {
@@ -37,8 +37,8 @@ export default function About() {
           <Reveal direction="left" className="relative mb-12 lg:mb-0">
             <div className="img-zoom relative aspect-[4/5] w-[78%] overflow-hidden rounded-[2rem]">
               <Image
-                src={IMG.lobbyDesk}
-                alt="Reception desk at Ayu International Hotel"
+                src={IMG.entrance}
+                alt="Entrance canopy of Ayu International Hotel"
                 fill
                 sizes="(min-width: 1024px) 40vw, 80vw"
                 className="object-cover"
@@ -46,8 +46,8 @@ export default function About() {
             </div>
             <div className="img-zoom absolute -bottom-10 right-0 aspect-[4/3] w-[55%] overflow-hidden rounded-[1.5rem] border-[6px] border-cream-50 shadow-[0_40px_80px_-30px_rgba(18,17,16,0.45)]">
               <Image
-                src={IMG.terraceSunset}
-                alt="Sunset terrace lounge"
+                src={IMG.lawn}
+                alt="Garden lawn and walkways at the hotel"
                 fill
                 sizes="(min-width: 1024px) 28vw, 55vw"
                 className="object-cover"
@@ -63,24 +63,23 @@ export default function About() {
         {/* Copy */}
         <div className="lg:col-span-6 lg:pl-6">
           <Reveal>
-            <span className="eyebrow">About Ayu</span>
+            <span className="eyebrow">About Ayu Int Hotel</span>
             <h2 className="display-lg mt-5 text-ink-900">
-              A landmark of Ethiopian hospitality,
-              <br className="hidden sm:block" /> reimagined for today
+              At the centre of Adama,
+              <br className="hidden sm:block" /> a garden to come home to
             </h2>
           </Reveal>
           <Reveal delay={120} className="mt-7 space-y-5 text-[15px] leading-relaxed text-ink-500 sm:text-base">
             <p>
-              Set at the gateway to the Great Rift Valley, {HOTEL.name} has welcomed diplomats,
-              business leaders and travelling families to Adama since {HOTEL.founded}. Behind its
-              contemporary façade lies a philosophy rooted in Ethiopian generosity: every guest is
-              received as an honoured visitor to the family home.
+              {HOTEL.name} has welcomed guests to {HOTEL.address.city} since {HOTEL.founded}. It stands beside the
+              Aba Geda monument in the Gurmu area of town — close to the businesses and government offices of the
+              city centre, yet set back behind its own walled garden.
             </p>
             <p>
-              Today the hotel unites {HOTEL.roomCount} rooms and suites, a palm-fringed pool, three
-              dining venues, a sanctuary spa and the region&apos;s most sought-after ballroom — all a
-              short drive from Addis Ababa via the expressway, and moments from Adama&apos;s vibrant
-              centre.
+              Inside you will find {`single, double, twin and deluxe rooms`} alongside family rooms and an
+              executive suite, all with air conditioning, satellite television, refrigerator and en-suite hot
+              water. Outside, a paved garden path leads past the fountain to the swimming pool, the restaurant and
+              the bar — with private parking for guests arriving by car.
             </p>
           </Reveal>
 
@@ -88,7 +87,7 @@ export default function About() {
             {STATS.map((s) => (
               <div key={s.label} className="border-l border-gold-500/40 pl-4">
                 <p className="font-display text-4xl font-medium text-ink-900">
-                  <CountUp value={s.value} decimals={s.decimals ?? 0} suffix={s.suffix} />
+                  <CountUp value={s.value} suffix={s.suffix} />
                 </p>
                 <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-ink-400">{s.label}</p>
               </div>

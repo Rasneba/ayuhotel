@@ -5,7 +5,7 @@ import { IMG } from "@/lib/images";
 export default function NotFound() {
   return (
     <main id="main" className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-ink-950 text-cream-50">
-      <Image src={IMG.lobbyFoyer} alt="" fill sizes="100vw" className="object-cover opacity-30" />
+      <Image src={IMG.gardens} alt="" fill sizes="100vw" className="object-cover opacity-30" />
       <div className="absolute inset-0 bg-gradient-to-b from-ink-950/60 to-ink-950" />
       <div className="container-x relative py-32 text-center">
         <p className="eyebrow eyebrow-center justify-center">Error 404</p>

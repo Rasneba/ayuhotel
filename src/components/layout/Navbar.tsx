@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { HOTEL, NAV_LINKS, whatsappLink } from "@/lib/hotel";
-import { Close, Facebook, Instagram, Menu, Phone, WhatsApp, XSocial } from "@/components/ui/Icons";
+import { Close, Menu, Phone, WhatsApp } from "@/components/ui/Icons";
 import Logo from "./Logo";
 
 export default function Navbar() {
@@ -144,15 +144,6 @@ export default function Navbar() {
               <div className="flex items-center gap-4">
                 <a href={whatsappLink()} target="_blank" rel="noreferrer" aria-label="WhatsApp">
                   <WhatsApp size={20} />
-                </a>
-                <a href={HOTEL.social.instagram} target="_blank" rel="noreferrer" aria-label="Instagram">
-                  <Instagram size={20} />
-                </a>
-                <a href={HOTEL.social.facebook} target="_blank" rel="noreferrer" aria-label="Facebook">
-                  <Facebook size={20} />
-                </a>
-                <a href={HOTEL.social.x} target="_blank" rel="noreferrer" aria-label="X">
-                  <XSocial size={18} />
                 </a>
               </div>
             </div>
