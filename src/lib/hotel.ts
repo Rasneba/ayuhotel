@@ -1,46 +1,54 @@
+/**
+ * Company facts.
+ *
+ * Sourced from the hotel's own website (ayuinternationhotel.netlify.app) and
+ * its verified public listing — see docs/CONTENT-SOURCES.md. Update the phones
+ * and e-mail here if the front desk changes them; every page reads from here.
+ */
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
-  "https://ayuinternationhotel.netlify.app";
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? "https://ayuinternationhotel.netlify.app";
 
 export const HOTEL = {
   name: "Ayu International Hotel",
   shortName: "Ayu",
-  tagline: "Where the Rift Valley meets refined hospitality",
+  tagline: "A premium hotel in the centre of Adama",
   description:
-    "A five-star sanctuary in the heart of Adama, Ethiopia. 86 rooms and suites, an outdoor pool, award-winning dining, a serene spa and banquet venues for up to 400 guests — 75 minutes from Addis Ababa Bole International Airport.",
+    "Ayu International Hotel sits in the heart of Adama (Nazret), Oromia — comfortable single, double, twin and deluxe rooms, an outdoor swimming pool, garden restaurant and bar, conference and banquet halls, sauna, gym and free parking and Wi-Fi, 45 minutes from Addis Ababa on the expressway.",
   founded: 1995,
-  roomCount: 86,
-  rating: 4.8,
+  openHours: "Open 24 hours, every day",
   address: {
-    street: "Addis Ababa – Adama Road, Kebele 05",
+    street: "10 Kebele, Gurmu Woreda",
     city: "Adama (Nazret)",
     region: "Oromia",
     country: "Ethiopia",
     postalCode: "1000",
+    landmark: "Beside the Aba Geda monument, at the centre of Adama",
   },
-  geo: { lat: 8.5413, lng: 39.2705 },
-  phone: "+251 22 111 2345",
-  phoneHref: "tel:+251221112345",
-  mobile: "+251 911 234 567",
-  whatsapp: "251911234567",
-  email: "reservations@ayuinternationalhotel.com",
+  geo: { lat: 8.549, lng: 39.2722 },
+  plusCode: "G7R8+52H Adama",
+  phone: "+251 91 149 1500",
+  phoneHref: "tel:+251911491500",
+  phoneAlt: "+251 93 010 6757",
+  phoneAltHref: "tel:+251930106757",
+  whatsapp: "251911491500",
+  email: "ayuhotel@gmail.com",
   checkIn: "2:00 PM",
-  checkOut: "11:00 AM",
+  checkOut: "12:00 PM",
   social: {
-    facebook: "https://facebook.com/ayuinternationalhotel",
-    instagram: "https://instagram.com/ayuinternationalhotel",
-    x: "https://x.com/ayuhotel",
-    tiktok: "https://tiktok.com/@ayuinternationalhotel",
-    tripadvisor: "https://tripadvisor.com",
+    // The hotel's own site publishes no working social profiles yet; add the
+    // real ones here when the accounts are created.
+    facebook: "",
+    instagram: "",
+    tiktok: "",
   },
 } as const;
 
 export const NAV_LINKS = [
   { label: "Rooms", href: "/#rooms" },
   { label: "Dining", href: "/#dining" },
-  { label: "Spa", href: "/#spa" },
+  { label: "Wellness", href: "/#wellness" },
   { label: "Gallery", href: "/#gallery" },
-  { label: "Offers", href: "/#offers" },
+  { label: "Meetings", href: "/#events" },
   { label: "Contact", href: "/#contact" },
 ] as const;
 
@@ -51,5 +59,9 @@ export function whatsappLink(message?: string): string {
   return `https://wa.me/${HOTEL.whatsapp}?text=${encodeURIComponent(text)}`;
 }
 
-export const MAPS_DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${HOTEL.geo.lat},${HOTEL.geo.lng}`;
-export const MAPS_EMBED_URL = `https://maps.google.com/maps?q=${HOTEL.geo.lat},${HOTEL.geo.lng}&z=14&output=embed`;
+export const MAPS_DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+  HOTEL.plusCode,
+)}`;
+export const MAPS_EMBED_URL = `https://maps.google.com/maps?q=${encodeURIComponent(
+  `${HOTEL.plusCode}, ${HOTEL.address.city}, Ethiopia`,
+)}&z=16&output=embed`;

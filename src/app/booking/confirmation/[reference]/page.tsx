@@ -102,7 +102,7 @@ export default async function ConfirmationPage({ params }: { params: Promise<{ r
                 <span className="font-display text-3xl text-ink-900">{formatMoney(booking.totalCents)}</span>
               </div>
               <p className="mt-3 text-[11px] text-ink-500">
-                Payable in USD or Ethiopian Birr at the prevailing rate. Free cancellation until 48 hours before arrival.
+                Payable at the hotel in Ethiopian birr. Free cancellation until 48 hours before arrival.
               </p>
             </div>
           </div>
@@ -123,7 +123,7 @@ export default async function ConfirmationPage({ params }: { params: Promise<{ r
         {/* Next steps */}
         <div className="mt-10 grid gap-5 sm:grid-cols-3 animate-fade-up" style={{ animationDelay: "300ms" }}>
           {[
-            { Icon: Phone, title: "Need a transfer?", body: `Call ${HOTEL.phone} or message us on WhatsApp to arrange an airport pick-up from $45.` },
+            { Icon: Phone, title: "Need a transfer?", body: `Call ${HOTEL.phone} or message us on WhatsApp and reception will arrange a pick-up from Bole International Airport.` },
             { Icon: MapPin, title: "Finding us", body: `${HOTEL.address.street}, ${HOTEL.address.city}. 75 minutes from Bole Airport via the expressway.` },
             { Icon: ArrowUpRight, title: "Changes & cancellations", body: "Email reservations with your reference. Free changes and cancellation up to 48 hours before arrival." },
           ].map(({ Icon, title, body }) => (

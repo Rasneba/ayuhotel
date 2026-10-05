@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { fallbackRooms } from "@/db/seed-data";
 import { HOTEL, whatsappLink } from "@/lib/hotel";
-import { pexelsCrop } from "@/lib/images";
+import { OG_IMAGE } from "@/lib/images";
 import { formatMoney } from "@/lib/pricing";
 import { getRoomBySlug, getRooms } from "@/lib/queries";
 import BookingWidget from "@/components/booking/BookingWidget";
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     openGraph: {
       title: `${room.name} | ${HOTEL.name}`,
       description: room.tagline,
-      images: [{ url: pexelsCrop(room.images[0], 1200, 630), width: 1200, height: 630, alt: room.name }],
+      images: [{ url: room.images[0] ?? OG_IMAGE, width: 1000, height: 750, alt: room.name }],
     },
   };
 }
@@ -125,8 +125,8 @@ export default async function RoomPage({ params }: Params) {
               {[
                 { Icon: Clock, t: "Check-in & check-out", d: `Check-in from ${HOTEL.checkIn}, check-out by ${HOTEL.checkOut}. Early arrival and late departure on request.` },
                 { Icon: Shield, t: "Flexible cancellation", d: "Cancel or amend free of charge up to 48 hours before arrival. No prepayment required." },
-                { Icon: Users, t: "Children & extra beds", d: "Children under 12 stay free using existing bedding. Cots available on request." },
-                { Icon: Bed, t: "Breakfast & extras", d: "Full breakfast buffet at Sabisa included. Airport transfers from $45 one way." },
+                { Icon: Users, t: "Children & extra beds", d: "Cots and extra beds can be arranged with reception; children sharing with parents are accommodated at no extra charge." },
+                { Icon: Bed, t: "Meals & extras", d: "Breakfast, lunch and dinner are served in the hotel restaurant or in the garden. Airport transfers can be arranged at reception." },
               ].map(({ Icon, t, d }) => (
                 <div key={t} className="flex gap-4 rounded-2xl bg-cream-100 p-5">
                   <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-white text-gold-700"><Icon size={18} /></span>

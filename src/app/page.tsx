@@ -1,5 +1,5 @@
 import type { Review, Room } from "@/db/schema";
-import { fallbackRooms } from "@/db/seed-data";
+import { fallbackRooms, SEED_REVIEWS } from "@/db/seed-data";
 import { addDays, todayISO } from "@/lib/dates";
 import { HOTEL, SITE_URL } from "@/lib/hotel";
 import { OG_IMAGE } from "@/lib/images";
@@ -9,7 +9,7 @@ import Hero from "@/components/home/Hero";
 import About from "@/components/home/About";
 import RoomsSection from "@/components/home/RoomsSection";
 import Dining from "@/components/home/Dining";
-import Spa from "@/components/home/Spa";
+import Wellness from "@/components/home/Wellness";
 import Gallery from "@/components/gallery/Gallery";
 import Facilities from "@/components/home/Facilities";
 import Reviews from "@/components/home/Reviews";
@@ -19,13 +19,31 @@ import Contact from "@/components/home/Contact";
 
 export const dynamic = "force-dynamic";
 
-async function loadHomeData(): Promise<{ rooms: Room[]; reviews: Review[]; stats: { average: number; total: number } }> {
+/** Content bundled with the site — used whenever the database is unavailable. */
+function fallbackReviews(): Review[] {
+  return SEED_REVIEWS.map((r, i) => ({
+    ...r,
+    id: i + 1,
+    approved: true,
+    createdAt: r.createdAt ?? new Date(),
+  }));
+}
+
+async function loadHomeData(): Promise<{
+  rooms: Room[];
+  reviews: Review[];
+  stats: { average: number; total: number };
+}> {
   try {
     const [rooms, reviews, stats] = await Promise.all([getRooms(), getReviews(12), getReviewStats()]);
+    if (!rooms.length) throw new Error("no rooms in database");
     return { rooms, reviews, stats };
   } catch (error) {
-    console.error("Home data unavailable, using fallback content", error);
-    return { rooms: fallbackRooms(), reviews: [], stats: { average: HOTEL.rating, total: 0 } };
+    console.error("Home data unavailable, using bundled content", error);
+    const rooms = fallbackRooms();
+    const reviews = fallbackReviews();
+    const average = reviews.reduce((sum, r) => sum + r.rating, 0) / (reviews.length || 1);
+    return { rooms, reviews, stats: { average, total: reviews.length } };
   }
 }
 
@@ -47,14 +65,16 @@ export default async function HomePage() {
     name: HOTEL.name,
     description: HOTEL.description,
     url: SITE_URL,
-    image: OG_IMAGE,
+    image: `${SITE_URL}${OG_IMAGE}`,
     telephone: HOTEL.phone,
     email: HOTEL.email,
     foundingDate: String(HOTEL.founded),
-    priceRange: prices.length ? `${formatMoney(Math.min(...prices))} - ${formatMoney(Math.max(...prices))}` : undefined,
+    priceRange: prices.length
+      ? `${formatMoney(Math.min(...prices))} - ${formatMoney(Math.max(...prices))}`
+      : undefined,
+    currenciesAccepted: "ETB",
     checkinTime: "14:00",
-    checkoutTime: "11:00",
-    starRating: { "@type": "Rating", ratingValue: "5" },
+    checkoutTime: "12:00",
     address: {
       "@type": "PostalAddress",
       streetAddress: HOTEL.address.street,
@@ -66,20 +86,31 @@ export default async function HomePage() {
     geo: { "@type": "GeoCoordinates", latitude: HOTEL.geo.lat, longitude: HOTEL.geo.lng },
     aggregateRating:
       stats.total > 0
-        ? { "@type": "AggregateRating", ratingValue: stats.average.toFixed(1), reviewCount: stats.total, bestRating: 5 }
+        ? {
+            "@type": "AggregateRating",
+            ratingValue: stats.average.toFixed(1),
+            reviewCount: stats.total,
+            bestRating: 5,
+          }
         : undefined,
     amenityFeature: [
       "Outdoor swimming pool",
       "Sauna",
-      "Spa",
-      "Fitness centre",
+      "Massage",
+      "Beauty salon",
+      "Gymnasium",
       "Restaurant",
       "Bar",
+      "Garden",
+      "Conference and banquet halls",
       "Free Wi-Fi",
-      "Free parking",
+      "Free private parking",
       "Airport shuttle",
       "Business centre",
-      "Banquet hall",
+      "Lift",
+      "Air conditioning",
+      "Non-smoking rooms",
+      "ATM",
       "24-hour front desk",
     ].map((name) => ({ "@type": "LocationFeatureSpecification", name, value: true })),
     containsPlace: rooms.map((r) => ({
@@ -90,9 +121,13 @@ export default async function HomePage() {
       bed: { "@type": "BedDetails", typeOfBed: r.bedType },
       floorSize: { "@type": "QuantitativeValue", value: r.sizeSqm, unitCode: "MTK" },
       image: r.images[0],
-      offers: { "@type": "Offer", price: (r.priceCents / 100).toFixed(2), priceCurrency: "USD", url: `${SITE_URL}/rooms/${r.slug}` },
+      offers: {
+        "@type": "Offer",
+        price: (r.priceCents / 100).toFixed(2),
+        priceCurrency: "ETB",
+        url: `${SITE_URL}/rooms/${r.slug}`,
+      },
     })),
-    sameAs: Object.values(HOTEL.social),
   };
 
   return (
@@ -101,7 +136,7 @@ export default async function HomePage() {
       <About />
       <RoomsSection rooms={rooms} />
       <Dining />
-      <Spa />
+      <Wellness />
       <Gallery />
       <Facilities />
       <Reviews reviews={reviews} stats={stats} />

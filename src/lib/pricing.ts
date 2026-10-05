@@ -155,19 +155,15 @@ export function buildQuote(input: {
   };
 }
 
-const usdWhole = new Intl.NumberFormat("en-US", {
+const birr = new Intl.NumberFormat("en-US", {
   style: "currency",
-  currency: "USD",
+  currency: "ETB",
+  currencyDisplay: "code",
   minimumFractionDigits: 0,
   maximumFractionDigits: 0,
 });
-const usdExact = new Intl.NumberFormat("en-US", {
-  style: "currency",
-  currency: "USD",
-  minimumFractionDigits: 2,
-  maximumFractionDigits: 2,
-});
 
-export function formatMoney(cents: number): string {
-  return cents % 100 === 0 ? usdWhole.format(cents / 100) : usdExact.format(cents / 100);
+/** Amounts are stored as santim (1/100 Ethiopian birr), like the old cents. */
+export function formatMoney(santim: number): string {
+  return birr.format(santim / 100);
 }

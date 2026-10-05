@@ -24,9 +24,11 @@ export default function Logo({
       </span>
       {!compact && (
         <span className="flex flex-col leading-none">
-          <span className={`font-display text-[22px] font-semibold tracking-[0.22em] ${text}`}>AYU</span>
+          <span className={`font-display text-[22px] font-semibold tracking-[0.2em] ${text}`}>
+            AYU <span className="text-[#d3202a]">INT</span> HOTEL
+          </span>
           <span className={`mt-1 text-[9px] font-semibold uppercase tracking-[0.34em] ${sub}`}>
-            International Hotel
+            Adama · Ethiopia
           </span>
         </span>
       )}

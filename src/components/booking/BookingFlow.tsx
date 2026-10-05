@@ -137,8 +137,8 @@ export default function BookingFlow({ rooms, initialSearch }: Props) {
           <span className="eyebrow">Reservations</span>
           <h1 className="display-lg mt-4 text-ink-900">Book your stay</h1>
           <p className="mt-3 max-w-xl text-sm text-ink-500 sm:text-base">
-            Live availability, transparent pricing and no payment until you arrive. Best rate guaranteed when you
-            book direct.
+            Live availability, transparent pricing in Ethiopian birr and no payment until you arrive — it is
+            always cheapest to book direct with the hotel.
           </p>
         </div>
         <ol className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em]" aria-label="Booking progress">
@@ -395,7 +395,7 @@ export default function BookingFlow({ rooms, initialSearch }: Props) {
               </fieldset>
               <ul className="mt-5 space-y-2 text-[12px] text-ink-500">
                 <li className="flex items-center gap-2"><Shield size={14} className="text-gold-600" /> Free cancellation up to 48 hours before arrival</li>
-                <li className="flex items-center gap-2"><Lock size={14} className="text-gold-600" /> No payment today — settle at the hotel in USD or ETB</li>
+                <li className="flex items-center gap-2"><Lock size={14} className="text-gold-600" /> No payment today — settle at the hotel in Ethiopian birr</li>
                 <li className="flex items-center gap-2"><Check size={14} className="text-gold-600" /> Instant confirmation with a booking reference</li>
               </ul>
             </form>

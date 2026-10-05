@@ -12,8 +12,8 @@ export default function RoomsSection({ rooms }: { rooms: Room[] }) {
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
             eyebrow="Rooms & Suites"
-            title="Spaces designed for rest, work and celebration"
-            description="From garden-facing classics to the top-floor Presidential Suite, every room pairs Ethiopian craftsmanship with international five-star standards — and breakfast is always included."
+            title="Rooms for resting, working and travelling together"
+            description="Every room is air-conditioned, with satellite television, a refrigerator, an in-room safe and en-suite hot water. Choose the bed that suits your trip — singles, doubles, twins, family rooms or the executive suite."
           />
           <Reveal delay={150} className="shrink-0">
             <Link href="/rooms" className="link-underline inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.2em] text-ink-900">

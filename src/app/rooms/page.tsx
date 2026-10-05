@@ -13,7 +13,7 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Rooms & Suites",
   description:
-    "Compare all rooms and suites at Ayu International Hotel, Adama — from Classic Garden Rooms to the Presidential Suite. Breakfast included, best rate guaranteed.",
+    "Compare the single, double, twin, deluxe and family rooms and the executive suite at Ayu International Hotel, Adama. Book direct for the best rate.",
   alternates: { canonical: "/rooms" },
 };
 
@@ -23,14 +23,15 @@ export default async function RoomsPage() {
   return (
     <main id="main" className="bg-cream-100">
       <section className="relative flex min-h-[60svh] items-end overflow-hidden bg-ink-950 text-cream-50">
-        <Image src={IMG.roomView} alt="Suite with panoramic windows" fill priority sizes="100vw" className="object-cover opacity-70" />
+        <Image src={IMG.roomDeluxe} alt="Deluxe room at Ayu International Hotel" fill priority sizes="100vw" className="object-cover opacity-70" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/40 to-ink-950/30" />
         <div className="container-x relative pb-14 pt-40">
           <span className="eyebrow">Rooms & Suites</span>
           <h1 className="display-xl mt-4 max-w-3xl">Six ways to stay, one standard of care</h1>
           <p className="mt-5 max-w-xl text-base text-cream-200/80">
-            Every category includes breakfast at Sabisa, high-speed Wi-Fi, access to the pool, sauna and fitness
-            centre — and the same attentive service.
+            Single, double and twin rooms, deluxe and family rooms and our executive suite — each with air
+            conditioning, satellite television, en-suite hot water, free Wi-Fi and access to the pool, sauna and
+            gymnasium.
           </p>
         </div>
       </section>

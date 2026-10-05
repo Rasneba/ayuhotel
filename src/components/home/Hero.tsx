@@ -9,9 +9,9 @@ import BookingWidget, { type RoomOption } from "@/components/booking/BookingWidg
 import { ChevronDown } from "@/components/ui/Icons";
 
 const SLIDES = [
-  { src: IMG.heroNight, alt: "Ayu International Hotel pool illuminated at night, lined with palms" },
-  { src: IMG.heroMountain, alt: "Pool terrace with the Rift Valley escarpment behind" },
-  { src: IMG.heroDubai, alt: "Guests relaxing by the resort pool at dusk" },
+  { src: IMG.exterior, alt: "Ayu International Hotel seen across its garden and swimming pool" },
+  { src: IMG.gardens, alt: "The courtyard garden and walkways of Ayu International Hotel" },
+  { src: IMG.pool, alt: "The outdoor swimming pool in the hotel gardens" },
 ];
 
 const INTERVAL = 7000;
@@ -56,13 +56,13 @@ export default function Hero({
       ))}
 
       {/* Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-ink-950/70 via-ink-950/20 to-ink-950/90" />
-      <div className="absolute inset-0 bg-gradient-to-r from-ink-950/60 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-ink-950/70 via-ink-950/25 to-ink-950/90" />
+      <div className="absolute inset-0 bg-gradient-to-r from-ink-950/65 via-transparent to-transparent" />
 
       {/* Vertical caption */}
       <div className="absolute left-6 top-1/2 hidden -translate-y-1/2 xl:flex">
         <p className="rotate-180 text-[10px] font-semibold uppercase tracking-[0.5em] text-cream-100/50 [writing-mode:vertical-rl]">
-          Adama · Ethiopia · Est. {HOTEL.founded}
+          Adama · Oromia · Ethiopia
         </p>
       </div>
 
@@ -90,19 +90,19 @@ export default function Hero({
       <div className="container-x relative flex flex-1 flex-col justify-center pb-10 pt-36 sm:pt-40 lg:pb-16">
         <div className="max-w-4xl">
           <p className="eyebrow animate-fade-up" style={{ animationDelay: "150ms" }}>
-            Five-star hospitality · Since {HOTEL.founded}
+            Welcome to Ayu Int Hotel · Since {HOTEL.founded}
           </p>
           <h1 className="display-xl mt-6 animate-fade-up text-cream-50" style={{ animationDelay: "300ms" }}>
-            Where the Rift Valley
+            A premium hotel in the
             <br />
-            meets <em className="font-light italic text-gold-gradient">refined hospitality</em>
+            heart of <em className="font-light italic text-gold-gradient">Adama</em>
           </h1>
           <p
             className="mt-7 max-w-xl animate-fade-up text-[15px] leading-relaxed text-cream-100/80 sm:text-lg"
             style={{ animationDelay: "450ms" }}
           >
-            An urban sanctuary in the heart of Adama — {HOTEL.roomCount} rooms and suites, a palm-lined
-            pool, award-winning dining and a spa inspired by Ethiopia&apos;s ancient wellness rituals.
+            Comfortable rooms, a garden with an outdoor swimming pool, restaurant and bar, conference halls and
+            free parking — all in the centre of Adama, around 45 minutes from Addis Ababa on the expressway.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4 animate-fade-up" style={{ animationDelay: "600ms" }}>
             <Link href="/booking" className="btn-gold">
@@ -117,7 +117,8 @@ export default function Hero({
         <div className="mt-14 animate-fade-up lg:mt-20" style={{ animationDelay: "800ms" }}>
           <BookingWidget rooms={rooms} tone="dark" layout="bar" initial={defaultStay} />
           <p className="mt-3 text-center text-[11px] tracking-wide text-cream-100/50 lg:text-left">
-            Best rate guaranteed when you book direct · Free cancellation up to 48 hours before arrival
+            Book direct with the hotel · Reception answers 24 hours a day · Free cancellation up to 48 hours
+            before arrival
           </p>
         </div>
       </div>

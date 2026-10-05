@@ -102,10 +102,10 @@ export default function Reviews({ reviews: initial, stats: initialStats }: Props
         <div className="grid gap-12 lg:grid-cols-12 lg:items-end">
           <Reveal className="lg:col-span-7">
             <span className="eyebrow">Guest Reviews</span>
-            <h2 className="display-lg mt-5">Stories our guests tell</h2>
+            <h2 className="display-lg mt-5">What guests tell us</h2>
             <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-cream-200/65 sm:text-base">
-              Every review is written by a guest who stayed, dined or celebrated with us. We read each one — and
-              we reply.
+              Feedback from guests who stayed with us, and from our public listings. If something was not right,
+              the front desk will put it right — day or night.
             </p>
           </Reveal>
 
@@ -116,7 +116,7 @@ export default function Reviews({ reviews: initial, stats: initialStats }: Props
                   <p className="font-display text-6xl font-light leading-none text-gold-gradient">{stats.average.toFixed(1)}</p>
                   <Stars value={stats.average} className="mt-2" />
                   <p className="mt-2 text-[11px] uppercase tracking-[0.2em] text-cream-200/60">
-                    {stats.total} verified review{stats.total === 1 ? "" : "s"}
+                    {stats.total} guest reviews{stats.total === 1 ? "" : "s"}
                   </p>
                 </div>
                 <ul className="flex-1 space-y-1.5">

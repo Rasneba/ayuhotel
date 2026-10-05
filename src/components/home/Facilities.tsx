@@ -11,6 +11,7 @@ import {
   Concierge,
   Dumbbell,
   Elevator,
+  Globe,
   Plane,
   Pool,
   Shield,
@@ -19,6 +20,8 @@ import {
   Sparkles,
   Trees,
   Users,
+  Utensils,
+  Wine,
   Wifi,
   type IconProps,
 } from "@/components/ui/Icons";
@@ -26,21 +29,24 @@ import {
 type Facility = { name: string; detail: string; Icon: ComponentType<IconProps> };
 
 const FACILITIES: Facility[] = [
-  { name: "Outdoor Pool", detail: "Heated, palm-lined, open 7 AM – 10 PM", Icon: Pool },
-  { name: "Sauna & Steam", detail: "Complimentary for all house guests", Icon: Spa },
-  { name: "Fitness Centre", detail: "24 hours, Technogym equipment", Icon: Dumbbell },
-  { name: "24-hour Front Desk", detail: "Concierge, luggage & currency exchange", Icon: Concierge },
-  { name: "Airport Shuttle", detail: "Bole International — 75 minutes", Icon: Plane },
-  { name: "Business Centre", detail: "Printing, meeting pods, secretarial", Icon: Briefcase },
-  { name: "Meetings & Banquets", detail: "Ballroom for 400, four breakout rooms", Icon: Users },
-  { name: "Botanical Gardens", detail: "Two hectares of acacia & jacaranda", Icon: Trees },
-  { name: "Free Parking", detail: "Secure, covered, EV charging", Icon: Car },
-  { name: "High-speed Wi-Fi", detail: "Fibre throughout, free of charge", Icon: Wifi },
-  { name: "Lifts & Accessibility", detail: "Step-free access, adapted rooms", Icon: Elevator },
-  { name: "Climate Control", detail: "Individually controlled in every room", Icon: Snowflake },
-  { name: "Room Service", detail: "Around the clock, 30-minute promise", Icon: Bell },
-  { name: "Laundry & Pressing", detail: "Same-day return before 10 AM", Icon: Sparkles },
-  { name: "Security", detail: "24/7 patrols, CCTV, in-room safes", Icon: Shield },
+  { name: "Outdoor Pool", detail: "In the garden, for house guests", Icon: Pool },
+  { name: "Sauna", detail: "Separate men's and women's rooms", Icon: Spa },
+  { name: "Massage", detail: "Booked through reception", Icon: Sparkles },
+  { name: "Beauty Salon", detail: "On site, for guests and visitors", Icon: Sparkles },
+  { name: "Gymnasium", detail: "Cardio and free weights", Icon: Dumbbell },
+  { name: "Restaurant", detail: "Ethiopian and continental cooking", Icon: Utensils },
+  { name: "Bar", detail: "Indoor bar and garden terrace", Icon: Wine },
+  { name: "Conference Halls", detail: "Meetings, weddings and banquets", Icon: Users },
+  { name: "24-hour Front Desk", detail: "Check-in at any hour", Icon: Bell },
+  { name: "Airport Shuttle", detail: "Pick-up from Bole on request", Icon: Plane },
+  { name: "Business Centre", detail: "Printing and meeting space", Icon: Briefcase },
+  { name: "Free Wi-Fi", detail: "In the lobby and all rooms", Icon: Wifi },
+  { name: "Free Parking", detail: "Private, secure parking on site", Icon: Car },
+  { name: "Lift", detail: "To every guest floor", Icon: Elevator },
+  { name: "Air Conditioning", detail: "In every room", Icon: Snowflake },
+  { name: "Garden", detail: "Walled garden and walkways", Icon: Trees },
+  { name: "Non-Smoking Rooms", detail: "Available on request", Icon: Shield },
+  { name: "ATM", detail: "On the premises", Icon: Globe },
 ];
 
 export default function Facilities() {
@@ -50,13 +56,13 @@ export default function Facilities() {
         <SectionHeading
           align="center"
           eyebrow="Facilities & Services"
-          title="Everything considered, nothing overlooked"
-          description="From the moment our shuttle meets you at Bole to the last espresso before departure, every service is designed to make Adama feel effortless."
+          title="Everything you need, on the property"
+          description="Parking, restaurant, bar, conference halls, sauna, massage, beauty salon, gym, pool, lift, ATM, free Wi-Fi and a front desk that never closes."
         />
 
-        <div className="mt-14 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
+        <div className="mt-14 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
           {FACILITIES.map((f, i) => (
-            <Reveal key={f.name} delay={(i % 5) * 70} className="h-full">
+            <Reveal key={f.name} delay={(i % 6) * 60} className="h-full">
               <div className="group flex h-full flex-col rounded-2xl border border-ink-900/10 bg-white p-5 transition-all duration-500 ease-luxe hover:-translate-y-1 hover:border-gold-500/60 hover:shadow-[0_30px_60px_-30px_rgba(18,17,16,0.3)]">
                 <span className="grid h-11 w-11 place-items-center rounded-full bg-cream-100 text-gold-700 transition-colors duration-500 group-hover:bg-gold-500 group-hover:text-ink-950">
                   <f.Icon size={20} />
@@ -69,43 +75,45 @@ export default function Facilities() {
         </div>
 
         {/* Events feature */}
+        <span id="events" className="block scroll-mt-28" />
         <Reveal direction="scale" className="mt-16">
           <div className="relative overflow-hidden rounded-[2rem] bg-ink-900 text-cream-50">
             <Image
-              src={IMG.eventChandeliers}
-              alt="Abyssinia Ballroom set for a gala dinner"
+              src={IMG.meetingHall}
+              alt="Conference and banquet hall at Ayu International Hotel set with round tables"
               fill
               sizes="100vw"
-              className="object-cover opacity-50"
+              className="object-cover opacity-40"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/80 to-ink-950/20" />
+            <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/85 to-ink-950/35" />
             <div className="relative grid gap-10 px-8 py-14 lg:grid-cols-12 lg:px-16 lg:py-20">
               <div className="lg:col-span-7">
                 <span className="eyebrow">Meetings, weddings & events</span>
-                <h3 className="display-lg mt-5">The Abyssinia Ballroom</h3>
+                <h3 className="display-lg mt-5">Conference & banquet halls</h3>
                 <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-cream-200/75">
-                  A pillar-free hall for up to 400 guests, four daylight breakout rooms and a garden pavilion for
-                  ceremonies under the jacarandas. Our events team handles everything from floral design to
-                  simultaneous translation.
+                  Ayu Int Hotel is one of the established meeting addresses in Adama. Our halls are arranged to
+                  suit the occasion — theatre or classroom layouts for conferences and training, and round-table
+                  banquets for weddings, christenings and gala dinners. Catering, sound and a microphone come from
+                  the hotel kitchen and team, and there is parking for delegates on site.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
                   <Link href="/#contact" className="btn-gold">
                     Plan an event
                   </Link>
                   <Link href="/#gallery" className="btn-outline-light">
-                    See the venues
+                    See the halls
                   </Link>
                 </div>
               </div>
-              <div className="grid grid-cols-3 gap-6 self-end lg:col-span-5">
+              <div className="grid gap-6 self-end sm:grid-cols-3 lg:col-span-5">
                 {[
-                  { v: "400", l: "Banquet guests" },
-                  { v: "650 m²", l: "Pillar-free floor" },
-                  { v: "4", l: "Breakout rooms" },
+                  { t: "Conferences", d: "Theatre and classroom set-ups" },
+                  { t: "Weddings", d: "Round-table banquets and cake service" },
+                  { t: "Catering", d: "Ethiopian and international menus" },
                 ].map((s) => (
-                  <div key={s.l} className="border-l border-gold-500/50 pl-4">
-                    <p className="font-display text-3xl sm:text-4xl">{s.v}</p>
-                    <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-cream-200/60">{s.l}</p>
+                  <div key={s.t} className="border-l border-gold-500/50 pl-4">
+                    <p className="font-display text-2xl">{s.t}</p>
+                    <p className="mt-1 text-[11px] uppercase tracking-[0.15em] text-cream-200/60">{s.d}</p>
                   </div>
                 ))}
               </div>

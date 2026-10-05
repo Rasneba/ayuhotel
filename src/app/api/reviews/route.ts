@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
 import { createReview, getReviewStats, getReviews } from "@/lib/queries";
+import { SEED_REVIEWS } from "@/db/seed-data";
 
 export const dynamic = "force-dynamic";
 
@@ -10,8 +11,10 @@ export async function GET() {
     const [list, stats] = await Promise.all([getReviews(24), getReviewStats()]);
     return Response.json({ reviews: list, stats });
   } catch (error) {
-    console.error("GET /api/reviews", error);
-    return Response.json({ error: "Unable to load reviews." }, { status: 500 });
+    console.error("GET /api/reviews — serving bundled reviews", error);
+    const list = SEED_REVIEWS.map((r, i) => ({ ...r, id: i + 1, approved: true, createdAt: r.createdAt ?? new Date() }));
+    const average = list.reduce((sum, r) => sum + r.rating, 0) / (list.length || 1);
+    return Response.json({ offline: true, reviews: list, stats: { average, total: list.length } });
   }
 }
 
@@ -48,6 +51,9 @@ export async function POST(request: NextRequest) {
     return Response.json({ review }, { status: 201 });
   } catch (error) {
     console.error("POST /api/reviews", error);
-    return Response.json({ error: "We could not save your review. Please try again." }, { status: 500 });
+    return Response.json(
+      { error: "We could not save your review just now — please try again later, or e-mail it to ayuhotel@gmail.com." },
+      { status: 503 },
+    );
   }
 }

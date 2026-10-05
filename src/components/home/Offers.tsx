@@ -23,42 +23,42 @@ const OFFERS: Offer[] = [
   {
     title: "Early Bird",
     tag: "Save 15%",
-    description: "Plan ahead and enjoy our best flexible rate on every room and suite.",
-    perks: ["15% off the flexible rate", "Breakfast for two included", "Free cancellation up to 48h"],
+    description: "Plan your stay a month ahead and take 15% off the room rate.",
+    perks: ["15% off the room rate", "Free cancellation up to 48 hours", "No payment today"],
     code: "EARLYBIRD",
     href: "/booking?promo=EARLYBIRD",
-    image: IMG.heroMountain,
-    terms: "Valid for arrivals 30+ days from booking date.",
+    image: IMG.exterior,
+    terms: "Valid for arrivals 30 or more days from the booking date.",
   },
   {
     title: "Long Stay",
     tag: "Stay 4+, save 10%",
-    description: "Settle in. Four nights or more unlocks an automatic 10% saving and extra comforts.",
-    perks: ["10% applied automatically", "Complimentary pressing, 2 items daily", "Late check-out on request"],
+    description: "Four nights or more and the discount is applied automatically at checkout.",
+    perks: ["10% off applied automatically", "Same room for the whole stay", "Late check-out on request"],
     code: null,
     href: "/booking",
-    image: IMG.roomDeluxe,
-    terms: "No code needed — applied at checkout for 4+ nights.",
+    image: IMG.roomDouble,
+    terms: "No code needed — calculated for stays of four nights or more.",
   },
   {
-    title: "Romance Escape",
-    tag: "Save 12%",
-    description: "Rose-petal turndown, a candlelit dinner on the Terrace and a couples' sunset ritual.",
-    perks: ["Candlelit three-course dinner", "60-minute couples' massage", "Sparkling wine on arrival"],
-    code: "ROMANCE",
-    href: "/booking?promo=ROMANCE&room=executive-suite",
-    image: IMG.terraceSunset,
-    terms: "Minimum two nights. Subject to availability.",
+    title: "Welcome Offer",
+    tag: "Save 10%",
+    description: "A first-stay discount for guests booking directly with the hotel.",
+    perks: ["10% off the room rate", "Best rate when you book direct", "Free Wi-Fi and parking"],
+    code: "AYUWELCOME",
+    href: "/booking?promo=AYUWELCOME",
+    image: IMG.pool,
+    terms: "One use per guest. Subject to availability.",
   },
   {
     title: "Business Traveller",
     tag: "Save 8%",
-    description: "Seamless stays for working guests, with transfers and lounge privileges built in.",
-    perks: ["Airport transfer one-way", "Executive Lounge access", "Guaranteed 4 PM check-out"],
+    description: "For guests travelling on company business, with meeting rooms close at hand.",
+    perks: ["8% off the room rate", "Late check-out on request", "Priority use of the business centre"],
     code: "BUSINESS",
     href: "/booking?promo=BUSINESS&room=executive-suite",
-    image: IMG.lobbyHall,
-    terms: "Corporate ID may be requested at check-in.",
+    image: IMG.roomDeluxe,
+    terms: "Company identification may be requested at check-in.",
   },
 ];
 
@@ -93,8 +93,8 @@ export default function Offers() {
       <div className="container-x">
         <SectionHeading
           eyebrow="Special Offers"
-          title="Thoughtfully curated stays"
-          description="Direct bookings always receive our best available rate. Apply a code at checkout, or let our long-stay saving find you automatically."
+          title="Book direct with the hotel"
+          description="Reserving with us rather than through an agent means the best available rate, free cancellation and a room allocated by the people who know the building best."
         />
 
         <div className="mt-14 grid gap-7 md:grid-cols-2">

@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 import { normaliseStay, nightsBetween } from "@/lib/dates";
-import { getAvailability } from "@/lib/queries";
+import { bundledAvailability, getAvailability } from "@/lib/queries";
 
 export const dynamic = "force-dynamic";
 
@@ -33,7 +33,15 @@ export async function GET(request: NextRequest) {
       results,
     });
   } catch (error) {
-    console.error("GET /api/availability", error);
-    return Response.json({ error: "Unable to check availability right now." }, { status: 500 });
+    console.error("GET /api/availability — serving bundled rates", error);
+    return Response.json({
+      checkIn,
+      checkOut,
+      nights: nightsBetween(checkIn, checkOut),
+      adults,
+      children,
+      offline: true,
+      results: bundledAvailability({ checkIn, checkOut, guests: adults + children, promoCode }),
+    });
   }
 }
