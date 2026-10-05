@@ -39,3 +39,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# asset collector scratch output (scripts/collect-live-assets.mjs)
+/.assets-manifest
